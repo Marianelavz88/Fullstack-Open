@@ -1,7 +1,9 @@
 // eslint-disable-next-line react/prop-types
-const Total = ({exercises1, exercises2, exercises3})  => {
+const Total = ({parts})  => {
     return  (
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      // eslint-disable-next-line react/prop-types
+      <p>Number of exercises {parts[0].exercises + parts[1].exercises + parts[2].exercises }</p>
     );
+    
     }
     export default Total
