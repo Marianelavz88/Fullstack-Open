@@ -2,8 +2,13 @@ import { useState } from 'react'
 
 const StatisticsLine =  ({text, value}) => {
   return (
-<p>{text} = {value}</p>
-  )
+    <tbody>
+      <tr>
+           <td>{text}</td> 
+           <td>{value}</td>
+     </tr>
+     </tbody>
+    )
 } 
 const Statistics = ({good, bad, neutral }) => {
 
@@ -26,14 +31,14 @@ const Statistics = ({good, bad, neutral }) => {
     { total === 0 ? (<div> No feedback given</div>)
     
     : (
-    <>
+    <table>
     <StatisticsLine text = "Good" value = {good} />
     <StatisticsLine text = "Neutral" value = {neutral} />
     <StatisticsLine text = "Bad" value = {bad} />
     <StatisticsLine text = "All" value = {total} />
     <StatisticsLine text = "Average" value = {calculatedAverage()}/>
     <StatisticsLine text = "Positive" value =  {calculatedPositive()}/>
-    </>
+    </table>
     )
    }
   </div>
